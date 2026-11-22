@@ -1,0 +1,2 @@
+# Jagadeshwaraenterprises
+for chat gpt
