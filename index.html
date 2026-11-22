@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2b">
+  <meta name="description" content="Jagadeshwara Enterprises. Our new digital home is coming soon.">
+  <title>Jagadeshwara Enterprises | Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --navy: #101b2b;
+      --navy-soft: #17263a;
+      --gold: #d9b77a;
+      --cream: #f5f1e8;
+      --muted: #aab4c1;
+      --line: rgba(245,241,232,.14);
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--cream);
+      background:
+        radial-gradient(ellipse at 82% 18%, rgba(53,83,112,.28), transparent 38%),
+        radial-gradient(ellipse at 12% 88%, rgba(217,183,122,.08), transparent 35%),
+        var(--navy);
+      font-family: "DM Sans", sans-serif;
+    }
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      content: "";
+      opacity: .22;
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black, transparent 92%);
+    }
+    .shell { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 100vh; width: min(100% - 64px, 1320px); margin: 0 auto; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 34px 0; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--cream); }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgba(217,183,122,.65); color: var(--gold); font: 800 19px "Manrope", sans-serif; letter-spacing: -2px; }
+    .brand-name { font: 700 12px "Manrope", sans-serif; letter-spacing: .19em; text-transform: uppercase; }
+    .top-note { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 14px rgba(217,183,122,.8); }
+    main { display: grid; flex: 1; grid-template-columns: minmax(0, 1fr) minmax(250px, .72fr); align-items: center; gap: 7vw; padding: 9vh 0 10vh; }
+    .eyebrow { display: flex; align-items: center; gap: 13px; margin: 0 0 28px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    .eyebrow::before { width: 34px; height: 1px; background: var(--gold); content: ""; }
+    h1 { max-width: 790px; margin: 0; font: 500 clamp(3.5rem, 8.2vw, 7.8rem)/.99 "Manrope", sans-serif; letter-spacing: -.075em; }
+    h1 span { display: block; color: var(--gold); font-weight: 400; }
+    .intro { max-width: 490px; margin: 30px 0 0; color: #bdc5ce; font-size: clamp(15px, 1.35vw, 18px); line-height: 1.8; }
+    .rule { width: 64px; height: 1px; margin: 38px 0 20px; background: var(--gold); opacity: .8; }
+    .note { margin: 0; color: var(--muted); font-size: 12px; letter-spacing: .08em; }
+    .visual { position: relative; display: grid; place-items: center; min-height: 390px; }
+    .orbit { position: absolute; width: min(31vw, 390px); aspect-ratio: 1; border: 1px solid rgba(217,183,122,.23); border-radius: 50%; animation: rotate 32s linear infinite; }
+    .orbit::before, .orbit::after { position: absolute; content: ""; border: 1px solid rgba(245,241,232,.11); border-radius: 50%; }
+    .orbit::before { inset: 12%; }
+    .orbit::after { inset: 25%; }
+    .orbit-dot { position: absolute; top: 15%; left: 17%; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 22px rgba(217,183,122,.8); }
+    .seal { position: relative; display: grid; place-items: center; width: min(21vw, 260px); aspect-ratio: 1; border: 1px solid rgba(217,183,122,.48); border-radius: 50%; background: radial-gradient(circle, rgba(217,183,122,.11), rgba(16,27,43,.1) 68%); box-shadow: 0 0 90px rgba(0,0,0,.2), inset 0 0 50px rgba(217,183,122,.05); }
+    .seal-inner { display: grid; place-items: center; width: 76%; aspect-ratio: 1; border: 1px solid rgba(245,241,232,.13); border-radius: 50%; }
+    .seal-letter { color: var(--gold); font: 500 clamp(4rem, 8vw, 7rem)/1 "Manrope", sans-serif; letter-spacing: -.12em; transform: translateX(-.06em); }
+    .seal-caption { position: absolute; bottom: 16%; color: var(--muted); font-size: 8px; letter-spacing: .34em; text-transform: uppercase; }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0 28px; border-top: 1px solid var(--line); color: #8793a2; font-size: 11px; letter-spacing: .06em; }
+    .footer-right { color: var(--gold); letter-spacing: .14em; text-transform: uppercase; }
+    @keyframes rotate { to { transform: rotate(360deg); } }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 40px, 560px); }
+      header { padding: 23px 0; }
+      .brand-mark { width: 37px; height: 37px; }
+      .brand-name { max-width: 150px; font-size: 10px; line-height: 1.5; }
+      .top-note { font-size: 9px; letter-spacing: .1em; }
+      main { grid-template-columns: 1fr; gap: 30px; padding: 12vh 0 8vh; }
+      h1 { font-size: clamp(3.7rem, 15vw, 6rem); }
+      .intro { margin-top: 23px; }
+      .visual { min-height: 250px; }
+      .orbit { width: min(66vw, 300px); }
+      .seal { width: min(44vw, 190px); }
+      .seal-letter { font-size: 5rem; }
+      footer { align-items: flex-start; flex-direction: column; gap: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="#" aria-label="Jagadeshwara Enterprises home">
+        <span class="brand-mark" aria-hidden="true">J</span>
+        <span class="brand-name">Jagadeshwara Enterprises</span>
+      </a>
+      <div class="top-note"><span class="status-dot" aria-hidden="true"></span> A new chapter is coming</div>
+    </header>
+
+    <main>
+      <section aria-labelledby="headline">
+        <p class="eyebrow">Something is taking shape</p>
+        <h1 id="headline">Built for what’s <span>next.</span></h1>
+        <p class="intro">We’re working behind the scenes to bring Jagadeshwara Enterprises a new digital home. Thoughtful, clear, and made to move forward.</p>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="note">Our website is launching soon. Stay tuned.</p>
+      </section>
+
+      <div class="visual" aria-hidden="true">
+        <div class="orbit"><span class="orbit-dot"></span></div>
+        <div class="seal">
+          <div class="seal-inner"><span class="seal-letter">J</span></div>
+          <span class="seal-caption">Est. with purpose</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Jagadeshwara Enterprises. All rights reserved.</span>
+      <span class="footer-right">The best is in progress</span>
+    </footer>
+  </div>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
