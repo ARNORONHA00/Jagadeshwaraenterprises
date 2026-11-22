@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef8ff">
+  <meta name="description" content="Jagadeshwara Enterprises. Coming soon.">
+  <title>Jagadeshwara Enterprises | Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 32px 20px;
+      color: #124b91;
+      background: linear-gradient(135deg, #dff3ff 0%, #f8fcff 48%, #e5f5ff 100%);
+      font-family: "DM Sans", sans-serif;
+      text-align: center;
+    }
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 900px);
+      padding: 48px 20px;
+    }
+    .logo {
+      width: 112px;
+      height: 82px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      color: #087bd0;
+      font: 800 66px/1 "Manrope", sans-serif;
+      font-style: italic;
+      letter-spacing: -10px;
+      text-shadow: 0 5px 18px rgba(20, 117, 197, .14);
+    }
+    .brand {
+      margin: 0;
+      color: #104b91;
+      font: 800 clamp(28px, 5vw, 48px)/1.12 "Manrope", sans-serif;
+      letter-spacing: -.045em;
+    }
+    .brand::after {
+      content: "";
+      display: block;
+      width: 76px;
+      height: 2px;
+      margin: 22px auto 42px;
+      background: #39a9ee;
+    }
+    h1 {
+      margin: 0;
+      color: #087bd0;
+      font: 800 clamp(48px, 10vw, 92px)/1.05 "Manrope", sans-serif;
+      letter-spacing: -.065em;
+    }
+    .tagline {
+      margin: 16px 0 0;
+      color: #164d8b;
+      font-size: clamp(17px, 2.5vw, 25px);
+      font-style: italic;
+    }
+    .wave {
+      position: fixed;
+      z-index: 0;
+      left: -8%;
+      width: 116%;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, rgba(91, 190, 247, .18), rgba(57, 169, 238, .42), rgba(91, 190, 247, .12));
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+    .wave-top { top: -112px; }
+    .wave-bottom { bottom: -128px; transform: rotate(-8deg); }
+    @media (max-width: 520px) {
+      .page { padding: 30px 8px; }
+      .logo { margin-bottom: 14px; }
+      .brand::after { margin: 18px auto 34px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wave wave-top" aria-hidden="true"></div>
+  <div class="wave wave-bottom" aria-hidden="true"></div>
+  <main class="page">
+    <div class="logo" aria-hidden="true">JE</div>
+    <p class="brand">Jagadeshwara<br>Enterprises</p>
+    <h1>Coming Soon</h1>
+    <p class="tagline">Something Great is on the Way...</p>
+  </main>
+</body>
+</html>
